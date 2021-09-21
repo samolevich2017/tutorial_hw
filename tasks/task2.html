@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задача 2</title>
+	<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+	<style type="text/css">
+		pre #class{
+			color: yellow;
+		}
+
+		pre #text{
+			color: #fff;
+		}
+		.roman_list{
+			list-style: upper-roman;
+		}
+
+		.upLetter_list{
+			list-style: upper-alpha;
+		}
+
+		.lowLetter_list{
+			list-style: lower-alpha;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<div class="__blockMenu">
+			  <ul>
+			    <li><a href="../index.html">Задача 1</a></li>
+			    <li class="active"><a href="task2.html">Задача 2</a></li>
+			    <li><a href="task3.html">Задача 3</a></li>
+			  </ul>
+			</div>
+		</header>
+		<main>
+			<h2>Задача 2</h2>
+				<p>Слайд №23, презентация №2 - Реализовать списки.</p>
+				<a href="https://html5book.ru/html-lists/" target="blank">Подробная информация о работе со списками (клик чтобы перейти)</a>
+				<h4>Решение</h3>
+				<ol>
+					<li>Создаём html файл, допустим &laquo;task_2.html&raquo;</li>
+					<li>Затем, по примерам списков представленных в презентации №2 на слайде №23, реализуем их структуру:
+				</ol>
+				<p style="font-weight: bold; color: #72e87b;">!!! Желтым цветом выделены классы, по которым в CSS задается стиль для списков. !!! </p>
+				<h3>HTML-код:</h3>
+				<div class="markup-lists">
+					<pre style="color: aqua;">
+&lt;!-- Список 1 --&gt;
+	&lt;h4&gt;Языки программирования делятся на:&lt;/h4&gt;
+	&lt;ul <em id="class">class="lang_list"</em>&gt;
+		&lt;li&gt;
+			<em id="text">Структурные:</em>
+			&lt;ol&gt;
+				&lt;li&gt;<em id="text">Pascal</em>&lt;/li&gt;
+				&lt;li&gt;<em id="text">Oberton</em>&lt;/li&gt;
+				&lt;li&gt;<em id="text">C</em>
+					&lt;ol&gt;
+						&lt;li&gt;<em id="text">Go</em>&lt;/li&gt;
+						&lt;li&gt;<em id="text">Limbo</em>&lt;/li&gt;
+					&lt;/ol&gt;
+				&lt;/li&gt;
+				&lt;li&gt;<em id="text">Lua</em>&lt;/li&gt;
+			&lt;/ol&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			<em id="text">Объектно-ориентированные</em>
+			&lt;ol&gt;
+				&lt;li&gt;<em id="text">C++</em>&lt;/li&gt;
+				&lt;li&gt;<em id="text">Java</em>&lt;/li&gt;
+			&lt;/ol&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+		<em id="text">Функциональные</em>
+			&lt;ol&gt;
+				&lt;li&gt;<em id="text">Lisp</em>&lt;/li&gt;
+				&lt;li&gt;<em id="text">Python</em>&lt;/li&gt;
+			&lt;/ol&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+<hr>
+&lt;!-- Список 2 --&gt;
+	&lt;ul <em id="class">class="roman_list"</em>&gt;
+		&lt;li&gt;<em id="text">Headings</em>&lt;/li&gt;
+		&lt;li&gt;<em id="text">Basic Text Sections</em>&lt;/li&gt;
+		&lt;li&gt;<em id="text">Lists</em>
+			&lt;ul <em id="class">class="upLetter_list"</em>&gt;
+				&lt;li&gt;<em id="text">Ordered</em>
+					&lt;ol&gt;
+						&lt;li&gt;<em id="text">The OL tag</em>
+							&lt;ul <em id="class">class="lowLetter_list"</em>&gt;
+								&lt;li&gt;<em id="text">TYPE</em>&lt;/li&gt;
+								&lt;li&gt;<em id="text">START</em>&lt;/li&gt;
+								&lt;li&gt;<em id="text">COMPACT</em>&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/li&gt;
+						&lt;li&gt;<em id="text">The LI tag</em>&lt;/li&gt;
+					&lt;/ol&gt;
+				&lt;/li&gt;
+				&lt;li&gt;<em id="text">Unordered</em>
+					&lt;ol&gt;
+						&lt;li&gt;<em id="text">The UL tag</em>&lt;/li&gt;
+						&lt;li&gt;<em id="text">The LI tag</em>&lt;/li&gt;
+					&lt;/ol&gt;
+				&lt;/li&gt;
+				&lt;li&gt;<em id="text">Definition</em>
+					&lt;ol&gt;
+						&lt;li&gt;<em id="text">The DL tag</em>&lt;/li&gt;
+						&lt;li&gt;<em id="text">The DT tag</em>&lt;/li&gt;
+						&lt;li&gt;<em id="text">The DD tag</em>&lt;/li&gt;
+					&lt;/ol&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;<em id="text">Miscellaneos</em>&lt;/li&gt;
+	&lt;/ul&gt;
+					</pre>
+					<h3>CSS-код (так как его не много, можно поместить в тег &lt;style&gt; внутри тега &lt;head&gt;):</h3>
+					<pre style="color: aqua;">
+	.roman_list{
+		list-style: upper-roman; // маркировка списка большими римскими цифрами
+	}
+
+	.upLetter_list{
+		list-style: upper-alpha; // маркировка списка большими латинскими буквами
+	}
+
+	.lowLetter_list{
+		list-style: lower-alpha; // маркировка списка маленькими латинскими буквами
+	}
+					</pre>
+				</div>
+				<hr>
+				<div>
+					<h3>Результат (готовые списки):</h3>
+					<h4>Список 1</h4>
+					<article>
+						<h4>Языки программирования делятся на:</h4>
+						<ul class="lang_list">
+							<li>
+								Структурные:
+								<ol>
+									<li>Pascal</li>
+									<li>Oberton</li>
+									<li>C
+										<ol>
+											<li>Go</li>
+											<li>Limbo</li>
+										</ol>
+									</li>
+									<li>Lua</li>
+								</ol>
+							</li>
+							<li>
+								Объектно-ориентированные
+								<ol>
+									<li>C++</li>
+									<li>Java</li>
+								</ol>
+							</li>
+							<li>
+								Функциональные
+								<ol>
+									<li>Lisp</li>
+									<li>Python</li>
+								</ol>
+							</li>
+						</ul>
+					</article>
+					<hr>
+					<h4>Список 2</h4>
+					<article>
+						<ul class="roman_list">
+							<li>Headings</li>
+							<li>Basic Text Sections</li>
+							<li>Lists
+								<ul class="upLetter_list">
+									<li>Ordered
+										<ol>
+											<li>The OL tag
+												<ul class="lowLetter_list">
+													<li>TYPE</li>
+													<li>START</li>
+													<li>COMPACT</li>
+												</ul>
+											</li>
+											<li>The LI tag</li>
+										</ol>
+									</li>
+									<li>Unordered
+										<ol>
+											<li>The UL tag</li>
+											<li>The LI tag</li>
+										</ol>
+									</li>
+									<li>Definition
+										<ol>
+											<li>The DL tag</li>
+											<li>The DT tag</li>
+											<li>The DD tag</li>
+										</ol>
+									</li>
+								</ul>
+							</li>
+							<li>Miscellaneos</li>
+						</ul>
+					</article>
+				</div>
+				<div class="allfile">
+					<details style="margin: 10px" open>
+						<summary style="font-size: 18px; margin: 10px; font-weight: bold;">Структура готового html файла</summary>
+						<pre style="color: aqua;">
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Задача 1&lt;/title&gt;
+	&lt;style type="text/css" &gt;
+		.roman_list{
+			list-style: upper-roman; // маркировка списка большими римскими цифрами
+		}
+
+		.upLetter_list{
+			list-style: upper-alpha; // маркировка списка большими латинскими буквами
+		}
+
+		.lowLetter_list{
+			list-style: lower-alpha; // маркировка списка маленькими латинскими буквами
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="container"&gt;
+		&lt;!-- Список 1 --&gt;
+		&lt;h4&gt;Языки программирования делятся на:&lt;/h4&gt;
+		&lt;ul <em id="class">class="lang_list"</em>&gt;
+			&lt;li&gt;
+				<em id="text">Структурные:</em>
+				&lt;ol&gt;
+					&lt;li&gt;<em id="text">Pascal</em>&lt;/li&gt;
+					&lt;li&gt;<em id="text">Oberton</em>&lt;/li&gt;
+					&lt;li&gt;<em id="text">C</em>
+						&lt;ol&gt;
+							&lt;li&gt;<em id="text">Go</em>&lt;/li&gt;
+							&lt;li&gt;<em id="text">Limbo</em>&lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/li&gt;
+					&lt;li&gt;<em id="text">Lua</em>&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				<em id="text">Объектно-ориентированные</em>
+				&lt;ol&gt;
+					&lt;li&gt;<em id="text">C++</em>&lt;/li&gt;
+					&lt;li&gt;<em id="text">Java</em>&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+			<em id="text">Функциональные</em>
+				&lt;ol&gt;
+					&lt;li&gt;<em id="text">Lisp</em>&lt;/li&gt;
+					&lt;li&gt;<em id="text">Python</em>&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+
+	&lt;!-- Список 2 --&gt;
+		&lt;ul <em id="class">class="roman_list"</em>&gt;
+			&lt;li&gt;<em id="text">Headings</em>&lt;/li&gt;
+			&lt;li&gt;<em id="text">Basic Text Sections</em>&lt;/li&gt;
+			&lt;li&gt;<em id="text">Lists</em>
+				&lt;ul <em id="class">class="upLetter_list"</em>&gt;
+					&lt;li&gt;<em id="text">Ordered</em>
+						&lt;ol&gt;
+							&lt;li&gt;<em id="text">The OL tag</em>
+								&lt;ul <em id="class">class="lowLetter_list"</em>&gt;
+									&lt;li&gt;<em id="text">TYPE</em>&lt;/li&gt;
+									&lt;li&gt;<em id="text">START</em>&lt;/li&gt;
+									&lt;li&gt;<em id="text">COMPACT</em>&lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/li&gt;
+							&lt;li&gt;<em id="text">The LI tag</em>&lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/li&gt;
+					&lt;li&gt;<em id="text">Unordered</em>
+						&lt;ol&gt;
+							&lt;li&gt;<em id="text">The UL tag</em>&lt;/li&gt;
+							&lt;li&gt;<em id="text">The LI tag</em>&lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/li&gt;
+					&lt;li&gt;<em id="text">Definition</em>
+						&lt;ol&gt;
+							&lt;li&gt;<em id="text">The DL tag</em>&lt;/li&gt;
+							&lt;li&gt;<em id="text">The DT tag</em>&lt;/li&gt;
+							&lt;li&gt;<em id="text">The DD tag</em>&lt;/li&gt;
+						&lt;/ol&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;<em id="text">Miscellaneos</em>&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+						</pre>
+					</details>
+				</div>
+		</main>
+		
+	</div>
+</body>
+</html>

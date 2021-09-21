@@ -1,0 +1,69 @@
+html,
+body{
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+/* Стиль для ссылок */
+a {
+  color: chartreuse;
+	text-decoration: none;
+}
+
+/* Стиль для навигационного блока */
+.__blockMenu {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0;
+  background-color: #292828;
+}
+
+/* Стиль для списка с пунктами меню */
+.__blockMenu ul {
+  list-style-type: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Стиль для пунктов меню */
+.__blockMenu ul>li{
+  display: inline-block;
+  margin-right: -5px;
+  padding: 13px 15px;
+}
+
+/* Стиль пункта меню при наведении курсора мыши */
+.__blockMenu ul>li:hover{
+  background-color: #211d1d;
+  cursor: pointer;
+  color: #336b2e;
+  text-shadow: 0 0 10px; 
+  box-shadow: 0 2px 5px black;
+}
+
+/* Стиль пунктов меню при клике */
+.__blockMenu ul>li:active {
+  text-shadow: 0 0 5px; 
+  box-shadow: 0 1px 2.5px black;
+}
+
+/* Стиль для выделения активной страницы */
+.active{
+  background-color: #211d1d;
+  color: #336b2e;
+}
+
+main{
+	margin: 30px;
+}
+
+main li{
+	line-height: 30px;
+}
